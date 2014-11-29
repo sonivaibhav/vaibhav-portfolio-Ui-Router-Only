@@ -1,0 +1,19 @@
+
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+<div id="loading">
+    <h5>Loading...</h5>
+</div>
+<div id="d3-container"></div>
+<div id="menu"></div>
+<script src="../js/viz.js"></script>
+<script>
+    d3.json("data/investments.json", function (error, data) {
+        VIZ.drawElements(data);
+        /*VIZ.drawElements(data.filter(function (d, i) { return i < 12; }));*/
+        VIZ.transform('helix');
+        d3.select("#loading").remove();
+        VIZ.render();
+        VIZ.animate();
+        window.addEventListener('resize', VIZ.onWindowResize, false);
+    });
+</script>

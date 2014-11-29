@@ -1,0 +1,209 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+      <!-- build:css(.) styles/vendor.css -->
+      <!-- bower:css -->
+      <!-- my-extra-css start-->
+      <link rel="shortcut icon" href="../favicon.ico">
+
+      <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+      <link rel="stylesheet" type="text/css" href="css/demo.css" />
+      <link rel="stylesheet" type="text/css" href="css/icons.css" />
+      <link rel="stylesheet" type="text/css" href="css/component.css" />
+      <link rel="stylesheet" type="text/css" href="css/default.css" />
+      <link rel="stylesheet" type="text/css" href="css/style2.css" />
+      <!--<link rel="stylesheet" type="text/css" href="css/style.css">-->
+
+      <script src="js/modernizr.custom.js"></script>
+      <!-- my-extra-css end-->
+      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+      <!-- endbower -->
+      <!-- endbuild -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/portfolio.css">
+        <link rel="stylesheet" href="styles/about.css">
+        <link rel="stylesheet" href="styles/main.css">
+
+        <!-- endbuild -->
+</head>
+  <body ng-app="vaibhavPortfolioApp">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+      <script src="bower_components/es5-shim/es5-shim.js"></script>
+      <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <!--<header ng-include="'views/header.html'" style="margin-top: 4%;"></header>-->
+    <div id="st-container" class="st-container">
+            <div id="st-trigger-effects" class="" style="position: absolute;z-index: 100;">
+                <button data-effect="st-effect-11">Scale &amp; rotate pusher</button>
+            </div>
+        
+
+        <nav class="st-menu st-effect-11" id="menu-11">
+            <h2 class="icon icon-lab">Sidebar</h2>
+            <ul>
+                <li><a class="icon icon-data" ui-sref="home">home</a></li>
+                <li><a class="icon icon-location" ui-sref="about">About</a></li>
+                <li><a class="icon icon-study" ui-sref="portfolio">Portfolio</a></li>
+                <li><a class="icon icon-photo" ui-sref="contact">Contact</a></li>
+                <li><a class="icon icon-wallet" ui-sref="aboutPortfolio">more info</a></li>
+            </ul>
+        </nav>
+
+        <!--<div ng-mouseenter="data.active = true" ng-mouseleave="data.active = false"><h1>helllo</h1></div>
+        <div class="button" id="contact" ng-show="data.active" class="fadein fadeout">
+            <div id="contact-icons">
+                <div>
+                    <div class="in">keep in</div>
+                    <br>
+                    <div id="introduce">Touch</div>
+                </div>
+            </div>
+        </div>-->
+        <div class="vr" id="line1"></div>
+    <div class="st-pusher">
+        <div class="st-content"><!-- this is the wrapper for the content -->
+            <div class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->
+                <!-- Top Navigation -->
+                <div ui-view=""></div>
+          <!--      <div id="intro">
+                    <h3>Top 100 Investors in CrunchBase (2004-2013)</h3>
+                    <p>Arranged by Total Number of Investments</p>
+                </div>
+                <div id="loading">
+                    <h5>Loading...</h5>
+                </div>
+                <div id="container"></div>
+                <div id="menu"></div>
+                <div id="icons">
+                    <img src="css/img/single.png">
+                    <img src="css/img/pinch.png">
+                    <img src="css/img/triple.png">
+                </div>-->
+
+                <!-- /main -->
+            </div><!-- /st-content-inner -->
+        </div><!-- /st-content -->
+    </div><!-- /st-pusher -->
+    </div><!-- /st-container -->
+    <div id="articles" open>
+        <div class="close-btn" id="article-x">×</div>
+        <div class="link"><span class="in">and</span> WORDS</div>
+        <div class="article" id="article-human">
+            <article class="article-title">Human HTML / CSS / JS</article>
+            <div class="link"><a>READ</a></div>
+        </div>
+        <div class="article" id="article-rwd">
+            <article class="article-title">Responsive Web Design</article>
+            <div class="link"><a>READ</a></div>
+        </div>
+        <div class="article" id="article-father">
+            <article class="article-title">Fatherhood Platform</article>
+            <div class="link"><a>READ</a></div>
+        </div>
+    </div>
+    <!-- D3.js start -->
+    <script src="lib/three.min.js"></script>
+    <script src="lib/tween.js"></script>
+    <script src="lib/CSS3DRenderer.js"></script>
+    <script src="lib/TrackballControls.js"></script>
+    <script src="lib/d3.min.js"></script>
+    <!--<script src="js/viz.js"></script>-->
+    <!--<script>
+        d3.json("data/investments.json", function (error, data) {
+            VIZ.drawElements(data);
+            VIZ.transform('helix');
+            d3.select("#loading").remove();
+            VIZ.render();
+            VIZ.animate();
+            window.addEventListener('resize', VIZ.onWindowResize, false);
+        });
+    </script>-->
+    <!-- D3.js end -->
+    <script src="js/classie.js"></script>
+    <script src="js/sidebarEffects.js"></script>
+   <!-- <div class="button" id="contact">
+        <div id="contact-icons" style="margin-top: -20px;">
+            <div id="open">
+                <div class="in">Selectively</div>
+                <br>
+                <div id="introduce">FREELANCING</div>
+            </div>
+            <div id="icon-vr"></div>
+            &lt;!&ndash; CONTACT ICONS &ndash;&gt;
+            <div class="email-icon"></div>
+            <div class="twitter-icon"></div>
+            <div class="email-icon-preload"></div>
+            <div class="twitter-icon-preload"></div>
+            <div id="phone"><a href="https://github.com/narrowdesign/narrowdesign" target="_blank" style="font-size:.8em"><icon>g</icon></a></div>
+        </div>
+        <div id="contact-cta" style="margin-top: -100px;"><span class="in">Hello.</span></div>
+    </div>-->
+
+
+
+
+
+    <!--<footer ng-include="'views/footer.html'"></footer>-->
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+
+        <!-- build:js scripts/plugins.js -->
+        <script src="bower_components/bootstrap-sass/js/bootstrap-affix.js"></script>
+        <script src="bower_components/bootstrap-sass/js/bootstrap-alert.js"></script>
+        <script src="bower_components/bootstrap-sass/js/bootstrap-dropdown.js"></script>
+        <script src="bower_components/bootstrap-sass/js/bootstrap-tooltip.js"></script>
+        <script src="bower_components/bootstrap-sass/js/bootstrap-modal.js"></script>
+        <script src="bower_components/bootstrap-sass/js/bootstrap-transition.js"></script>
+        <script src="bower_components/bootstrap-sass/js/bootstrap-button.js"></script>
+        <script src="bower_components/bootstrap-sass/js/bootstrap-popover.js"></script>
+        <script src="bower_components/bootstrap-sass/js/bootstrap-typeahead.js"></script>
+        <script src="bower_components/bootstrap-sass/js/bootstrap-carousel.js"></script>
+        <script src="bower_components/bootstrap-sass/js/bootstrap-scrollspy.js"></script>
+        <script src="bower_components/bootstrap-sass/js/bootstrap-collapse.js"></script>
+        <script src="bower_components/bootstrap-sass/js/bootstrap-tab.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js scripts/modules.js -->
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<!--        <script src="../bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+        <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>-->
+        <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/directive.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers\main.js"></script>
+        <!-- endbuild -->
+
+</body>
+</html>
+                                                           
